@@ -1,4 +1,4 @@
-public class Application2 {
+public class Rectangle_of_stars {
     public static void main(String[] args) {
         int height = 31;
         int width = 25;
