@@ -4,7 +4,7 @@ https://gitlab.com/dan-it/az-groups/az-be1-classes
 https://gitlab.com/dan-it/az-groups/az-be1-classes.git
 git@gitlab.com:dan-it/az-groups/az-be1-classes.git (ssh key uploading required)
 
-Homework:
+Homeworks.Homework:
 =========
 https://gitlab.com/dan-it/az-groups/az-be1
 https://gitlab.com/dan-it/az-groups/az-be1.git
