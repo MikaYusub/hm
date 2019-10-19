@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Homework2 {
-
+//TODO replace method to strings
     public static void main(String[] args) {
         int[][] matrix;
         matrix = new int[6][6];
