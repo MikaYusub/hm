@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Homework2 {
-//TODO replace method to strings
     public static void main(String[] args) {
         int[][] matrix;
         matrix = new int[6][6];
@@ -16,10 +15,9 @@ public class Homework2 {
             int[] PlayerShoot = PlayerTurn();
             allShoots = Arrays.copyOf(allShoots, allShoots.length + 1);
             allShoots[allShoots.length-1] = PlayerShoot;
-            System.out.println(allShoots.length + "+" + allShoots[0].length);
-            for (int i = 0; i < allShoots.length; i++) {
-                for (int j = 0; j < allShoots[i].length; j++) {
-                    System.out.println(Arrays.toString(allShoots[i]));
+            for (int[] allShoot : allShoots) {
+                for (int j = 0; j < allShoot.length; j++) {
+                    System.out.println(Arrays.toString(allShoot));
                 }
             }
             BuildGameField( matrix, allShoots, Aim);
