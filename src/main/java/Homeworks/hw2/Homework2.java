@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Homework2 {
+    //TODO переделать array arraylist
     public static void main(String[] args) {
         int[][] matrix;
         matrix = new int[6][6];
@@ -62,7 +63,6 @@ public class Homework2 {
         int random_column = random.nextInt(6) ;
         int random_row = random.nextInt(6);
         int []arr;
-        //System.out.println();
         arr = new int[2];
         arr[0]= random_column;
         arr[1]= random_row;

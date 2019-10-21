@@ -13,42 +13,40 @@ public class Homework {
         String name = scanner.nextLine();
         System.out.println("Type a number:");
         int[] intArray = new int[0];
-        while(true){
+        while (true) {
             int player_number = scanner.nextInt();
-            if (player_number < random_number){
+            if (player_number < random_number) {
                 System.out.println("Your number is too small. Please, try again.");
                 intArray = Arrays.copyOf(intArray, intArray.length + 1);
-                intArray[intArray.length-1] = player_number;
-            }else if (player_number > random_number){
+                intArray[intArray.length - 1] = player_number;
+            } else if (player_number > random_number) {
                 System.out.println("Your number is too big. Please, try again.");
                 intArray = Arrays.copyOf(intArray, intArray.length + 1);
-                intArray[intArray.length-1] = player_number;
-            } else{
+                intArray[intArray.length - 1] = player_number;
+            } else {
                 System.out.printf("Congratulations, %s", name);
                 intArray = Arrays.copyOf(intArray, intArray.length + 1);
-                intArray[intArray.length-1] = player_number;
-                bubbleSort(intArray);
+                intArray[intArray.length - 1] = player_number;
+                Sort(intArray);
                 System.out.println("\nYour numbers:" + Arrays.toString(intArray));
                 break;
             }
         }
     }
-    private static void bubbleSort(int[] intArray) {
+
+    private static void Sort(int[] intArray) {
         int n = intArray.length;
         int temp = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < (n - i); j++) {
 
-		for(int i=0; i < n; i++){
-        for(int j=1; j < (n-i); j++){
+                if (intArray[j - 1] > intArray[j]) {
+                    temp = intArray[j - 1];
+                    intArray[j - 1] = intArray[j];
+                    intArray[j] = temp;
+                }
 
-            if(intArray[j-1] > intArray[j]){
-                //swap the elements!
-                temp = intArray[j-1];
-                intArray[j-1] = intArray[j];
-                intArray[j] = temp;
             }
-
         }
-    }
-
     }
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Homework3 {
 
     public static int i = 0;
-    public static String UserInput;
+
 
     public static void main(String[] args) {
         final String[][] schedule = BuildSchedule();
@@ -15,7 +15,7 @@ public class Homework3 {
     private static void StartApp(String[][] schedule) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input the day of week");
-        UserInput = scanner.nextLine().toLowerCase();
+        String UserInput = scanner.nextLine().toLowerCase();
         while (!UserInput.equals("exit")) {
             switch (i) {
                 case 0:
@@ -25,12 +25,16 @@ public class Homework3 {
                             System.out.printf("Your task for %s: %s\n", weekdays, tasks);
                             UserInput = scanner.nextLine().toLowerCase();
                             i = 0;
-                            break;
-                        } else i = 1;
+                        } else i++;
                     }
-                case 1:
-                    UserInput = scanner.nextLine().toLowerCase();
+                    if (i > 0 && i < 7) {
+                        i = 0;
+                        UserInput = scanner.nextLine().toLowerCase();
+                    }
+
+                case 7:
                     System.out.println("Sorry, I don't understand you, please try again.");
+                    UserInput = scanner.nextLine().toLowerCase();
                     i = 0;
             }
         }
