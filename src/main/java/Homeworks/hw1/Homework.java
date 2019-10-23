@@ -27,25 +27,9 @@ public class Homework {
                 System.out.printf("Congratulations, %s", name);
                 intArray = Arrays.copyOf(intArray, intArray.length + 1);
                 intArray[intArray.length - 1] = player_number;
-                Sort(intArray);
+                BubbleSort.Sort(intArray);
                 System.out.println("\nYour numbers:" + Arrays.toString(intArray));
                 break;
-            }
-        }
-    }
-
-    private static void Sort(int[] intArray) {
-        int n = intArray.length;
-        int temp = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-
-                if (intArray[j - 1] > intArray[j]) {
-                    temp = intArray[j - 1];
-                    intArray[j - 1] = intArray[j];
-                    intArray[j] = temp;
-                }
-
             }
         }
     }
