@@ -1,3 +1,5 @@
+package general.Tasks_in_class;
+
 public class Circle extends Figure {
     private double area;
 

@@ -1,3 +1,5 @@
+package general.Tasks_in_class;
+
 import java.util.Random;
 
 public class Point {

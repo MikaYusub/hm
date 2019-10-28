@@ -11,5 +11,6 @@ public class Main {
         Human Presley = new Human("Lisa Marie", "Presley", 1968, motherPresley, fatherPresley);
         Pet pet1 = new Pet("Cat","Kisa");
         pet1.eat();
+
     }
 }

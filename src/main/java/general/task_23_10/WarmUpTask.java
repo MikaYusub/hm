@@ -1,4 +1,4 @@
-package Homeworks.task_23_10;
+package general.task_23_10;
 
 import java.util.ArrayList;
 import java.util.List;

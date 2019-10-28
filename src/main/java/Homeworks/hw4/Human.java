@@ -31,11 +31,7 @@ public class Human {
 
     public static String getTrickLevel() {
         String TrickLevel;
-        if (pet.trickLevel > 50) {
-            TrickLevel = "Очень хитрый";
-        } else {
-            TrickLevel = "Не совсем хитрый";
-        }
+        TrickLevel = pet.trickLevel > 50 ? "Очень хитрый" : "Не совсем хитрый";
         return TrickLevel;
     }
 
@@ -62,7 +58,7 @@ public class Human {
 //                    "{nickname=" + pet.nickname +
 //                    ", age=" + pet.age +
 //                    ", trickLevel=" + pet.trickLevel +
-//                    ", habits=" + Arrays.toString(pet.habits) +
+//                    ", habits=" + general.Tasks_in_class.Arrays.toString(pet.habits) +
 //                    "}}";
 //        }
 //    }
