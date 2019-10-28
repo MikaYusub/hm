@@ -5,13 +5,13 @@ import java.util.Arrays;
 
 public class Pet {
 
-    public String species = "Собака";
-    public int age;
-    public int trickLevel ;
-    public ArrayList<String> habits = new ArrayList<>();
-    public String nickname;
+    String species;
+    int age;
+    int trickLevel ;
+    private ArrayList<String> habits = new ArrayList<>();
+    private String nickname;
 
-    public String getNickname() {
+    String getNickname() {
         return nickname;
     }
 
@@ -23,8 +23,23 @@ public class Pet {
         System.out.println("Нужно хорошо замести следы...");
     }
 
-    public void eat() {
+    void eat() {
         System.out.println("Я кушаю!");
+    }
+
+    Pet() {    }
+
+    public Pet(String species, String nickname, int age, int trickLevel, ArrayList<String> habits) {
+        this.species = species;
+        this.age = age;
+        this.trickLevel = trickLevel;
+        this.habits = habits;
+        this.nickname = nickname;
+    }
+
+    Pet(String species, String nickname) {
+        this.species = species;
+        this.nickname = nickname;
     }
 
     @Override
@@ -36,22 +51,5 @@ public class Pet {
                 ", habits=" + habits +
                 ", nickname='" + nickname + '\'' +
                 '}';
-    }
-
-    public Pet() {
-
-    }
-
-    public Pet(String species, String nickname, int age, int trickLevel, ArrayList<String> habits) {
-        this.species = species;
-        this.age = age;
-        this.trickLevel = trickLevel;
-        this.habits = habits;
-        this.nickname = nickname;
-    }
-
-    public Pet(String species, String nickname) {
-        this.species = species;
-        this.nickname = nickname;
     }
 }

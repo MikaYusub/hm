@@ -1,15 +1,13 @@
 package Homeworks.hw4;
 
-import java.util.Arrays;
-
-public class Human {
-    public String name = "Mikayil";
-    public String surname = "Yusubov";
-    int year = 1999;
-    int iq = 90;
-    public static Pet pet = new Pet();
-    private Human father = new Human();
-    private Human mother = new Human();
+class Human {
+    private String name;
+    private String surname;
+    private int year;
+    private int iq;
+    private static Pet pet;
+    private Human father;
+    private Human mother;
     String[][] schedule = new String[][]
             {{"Monday", "Do some homework"}
                     , {"Tuesday", "Go to gym"}
@@ -28,11 +26,9 @@ public class Human {
         System.out.printf("Привет, %s\n", pet.getNickname());
     }
 
-
-    public static String getTrickLevel() {
+    private static String getTrickLevel() {
         String TrickLevel;
-        TrickLevel = pet.trickLevel > 50 ? "Очень хитрый" : "Не совсем хитрый";
-        return TrickLevel;
+        return TrickLevel = pet.trickLevel > 50 ? "Очень хитрый" : "Не совсем хитрый";
     }
 
     //    @Override
@@ -63,14 +59,13 @@ public class Human {
 //        }
 //    }
 
-
-    public Human(String name, String surname, int year) {
+    Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, int iq, Human mother, Human father, String[][] schedule, Pet pet) {
+    Human(String name, String surname, int year, int iq, Human mother, Human father, String[][] schedule, Pet pet) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -80,7 +75,7 @@ public class Human {
         this.schedule = schedule;
     }
 
-    public Human(String name, String surname, int year, Human mother, Human father) {
+    Human(String name, String surname, int year, Human mother, Human father) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -88,7 +83,7 @@ public class Human {
         this.father = father;
     }
 
-    public Human() {
+    Human() {
 
     }
 }
