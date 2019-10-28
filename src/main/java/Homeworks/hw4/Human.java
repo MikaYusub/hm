@@ -1,5 +1,8 @@
 package Homeworks.hw4;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 class Human {
     private String name;
     private String surname;
@@ -27,37 +30,41 @@ class Human {
     }
 
     private static String getTrickLevel() {
-        String TrickLevel;
-        return TrickLevel = pet.trickLevel > 50 ? "Очень хитрый" : "Не совсем хитрый";
+        return pet.trickLevel > 50 ? "Очень хитрый" : "Не совсем хитрый";
     }
 
-    //    @Override
-//    public String toString() {
-//        if (name == null) {
-//            return "Error";
-//        }else if (mother == null) {
-//            return "Human{" +
-//                    "name='" + name + '\'' +
-//                    ", surname='" + surname + '\'' +
-//                    ", year=" + year +
-//                    "}"
-//                    ;
-//        } else {
-//            return "Human{" +
-//                    "name='" + name + '\'' +
-//                    ", surname='" + surname + '\'' +
-//                    ", year=" + year +
-//                    ", iq=" + iq +
-//                    ", mother=" + mother +
-//                    ", father=" + father +
-//                    ", pet=" + pet.species +
-//                    "{nickname=" + pet.nickname +
-//                    ", age=" + pet.age +
-//                    ", trickLevel=" + pet.trickLevel +
-//                    ", habits=" + general.Tasks_in_class.Arrays.toString(pet.habits) +
-//                    "}}";
-//        }
-//    }
+    @Override
+    public String toString() {
+        if (name == null) {
+            return "Error";
+        }else if (mother==null){
+            return "Human{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", year=" + year +
+                    "}"
+                    ;
+        } else if (pet == null) {
+            return "Human{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", year=" + year +
+                    ", mother=" + mother.name +
+                    ", father=" + father.name +
+                    "}"
+                    ;
+        } else {
+            return "Human{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", year=" + year +
+                    ", iq=" + iq +
+                    ", mother=" + mother.name +
+                    ", father=" + father.name +
+                    ", pet=" + pet + "}";
+        }
+    }
+
 
     Human(String name, String surname, int year) {
         this.name = name;
@@ -65,14 +72,14 @@ class Human {
         this.year = year;
     }
 
-    Human(String name, String surname, int year, int iq, Human mother, Human father, String[][] schedule, Pet pet) {
+    Human(String name, String surname, int year, Human mother, Human father, int iq, Pet pet) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
         this.mother = mother;
         this.father = father;
-        this.schedule = schedule;
+        this.pet = pet;
     }
 
     Human(String name, String surname, int year, Human mother, Human father) {

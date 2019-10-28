@@ -6,28 +6,42 @@ import java.util.Arrays;
 public class Pet {
 
     String species;
-    int age;
-    int trickLevel ;
-    private ArrayList<String> habits = new ArrayList<>();
-    private String nickname;
+    static int age;
+    int trickLevel;
+    static ArrayList<String> habits = new ArrayList<>();
 
+    public String getSpecies() {
+        return species;
+    }
+
+    public static int getAge() {
+        return age;
+    }
+
+    public int getTrickLevel() {
+        return trickLevel;
+    }
+
+    public static ArrayList<String> getHabits() {
+        return habits;
+    }
+
+    String nickname;
     String getNickname() {
         return nickname;
     }
-
     public void respond() {
         System.out.printf("Привет, хозяин. Я - %s. Я соскучился!", nickname);
     }
-
     public void foul() {
         System.out.println("Нужно хорошо замести следы...");
     }
-
     void eat() {
         System.out.println("Я кушаю!");
     }
 
-    Pet() {    }
+    Pet() {
+    }
 
     public Pet(String species, String nickname, int age, int trickLevel, ArrayList<String> habits) {
         this.species = species;
@@ -44,12 +58,20 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "Pet{" +
-                "species='" + species + '\'' +
-                ", age=" + age +
-                ", trickLevel=" + trickLevel +
-                ", habits=" + habits +
-                ", nickname='" + nickname + '\'' +
-                '}';
+        if (age == 0) {
+            return "Pet{" +
+                    "species='" + species + '\'' +
+                    ", nickname='" + nickname + '\'' +
+                    '}';
+        }else {
+            return "Pet{" +
+                    "species='" + species + '\'' +
+                    ", age=" + age +
+                    ", trickLevel=" + trickLevel +
+                    ", habits=" + habits +
+                    ", nickname='" + nickname + '\'' +
+                    '}';
+        }
+
     }
 }
