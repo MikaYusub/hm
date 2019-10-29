@@ -95,8 +95,8 @@ public class Family {
 
     private int getlength_notnull(Human[] children){
         int count = 0;
-        for(Human el : children)
-            if (el != null)
+        for(Human child : children)
+            if (child != null)
                 ++count;
         return count;
     }
