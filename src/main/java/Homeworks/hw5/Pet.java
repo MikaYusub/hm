@@ -1,20 +1,39 @@
-package Homeworks.hw4;
+package Homeworks.hw5;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Pet {
 
-    String species;
-    static int age;
-    int trickLevel;
-    static ArrayList<String> habits = new ArrayList<>();
+    private String species;
+    private int age;
+    private int trickLevel;
+    private static ArrayList<String> habits = new ArrayList<>();
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setTrickLevel(int trickLevel) {
+        this.trickLevel = trickLevel;
+    }
+
+    public static void setHabits(ArrayList<String> habits) {
+        Pet.habits = habits;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
     public String getSpecies() {
         return species;
     }
 
-    public static int getAge() {
+    public int getAge() {
         return age;
     }
 

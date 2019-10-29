@@ -37,7 +37,7 @@ class Human {
     public String toString() {
         if (name == null) {
             return "Error";
-        }else if (mother==null){
+        } else if (mother == null) {
             return "Human{" +
                     "name='" + name + '\'' +
                     ", surname='" + surname + '\'' +
