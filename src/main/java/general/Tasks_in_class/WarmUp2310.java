@@ -1,10 +1,10 @@
-package general.task_23_10;
+package general.Tasks_in_class;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WarmUpTask {
+public class WarmUp2310 {
     public static void main(String[] args) {
         ArrayList<Integer> ints = new ArrayList<>();
         for (int i = 0; i < 101; i++) {

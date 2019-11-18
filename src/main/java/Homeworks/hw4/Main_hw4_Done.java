@@ -1,6 +1,6 @@
 package Homeworks.hw4;
 
-public class Main {
+public class Main_hw4_Done {
 
     public static void main(String[] args) {
         Pet pet1 = new Pet("Cat", "Kisa");

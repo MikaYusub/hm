@@ -1,4 +1,4 @@
-package general;
+package general.Tasks_in_class;
 
 import java.util.ArrayList;
 import java.util.List;

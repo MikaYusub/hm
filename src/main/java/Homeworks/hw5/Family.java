@@ -8,7 +8,6 @@ public class Family {
     private Human father;
     private Human[] children;
     private Pet pet = new Pet();
-
     public Human getMother() {
         return mother;
     }
