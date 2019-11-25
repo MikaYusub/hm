@@ -1,4 +1,4 @@
-package Homeworks.hw5;
+package Homeworks.hw6;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -33,6 +33,10 @@ class Human {
                 , this.family.getPet().getSpecies()
                 , this.family.getPet().getAge()
                 , this.family.getPet().getTrickLevel());
+    }
+
+    public String[][] getSchedule() {
+        return schedule;
     }
 
     private void greetPet() {
@@ -110,4 +114,7 @@ class Human {
         this.schedule = schedule;
     }
 
+    Human() {
+
+    }
 }
